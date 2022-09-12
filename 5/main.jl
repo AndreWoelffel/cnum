@@ -72,3 +72,31 @@ end
 println("Ex 2")
 X = seidel(A, B, 100)
 println(X)
+
+println("Ex 3 a")
+
+E = [-1.01 0.5 0 0;
+      0.5 -1.01 0.5 0;
+      0 0.5 -1.01 0.5;
+      0 0 0.5 -0.52]
+
+F = [-63; 0; 0; 0]
+
+X = E \ F
+println(X)
+X = seidel(E, F, 100)
+println(X)
+
+println("Ex 3 b")
+
+G = [-1.02 0.5 0 0;
+      0.5 -1.01 0.5 0;
+      0 0.5 -1.01 0.5;
+      0 0 0.5 -0.51]
+
+H = [-63; 0; 0; 0]
+
+X = G \ H
+println(X)
+X = seidel(G, H, 100)
+println(X)
